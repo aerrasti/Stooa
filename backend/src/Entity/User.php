@@ -216,6 +216,12 @@ class User implements UserInterface
      */
     private ?string $plainPassword = null;
 
+    /** @ORM\Column(name="twitter_id", type="string", length=255, nullable=true) */
+    protected ?string $twitterId;
+
+    /** @ORM\Column(name="twitter_access_token", type="string", length=255, nullable=true) */
+    protected ?string $twitterAccessToken;
+    
     public function __construct()
     {
         $this->fishbowls = new ArrayCollection();
@@ -464,5 +470,29 @@ class User implements UserInterface
     public function getSalt(): ?string
     {
         return null;
+    }
+
+    public function getTwitterId(): ?string
+    {
+        return $this->twitterId;
+    }
+
+    public function setTwitterId($twitterId): self
+    {
+        $this->twitterId = $twitterId;
+
+        return $this;
+    }
+
+    public function getTwitterAccessToken(): ?string
+    {
+        return $this->twitterAccessToken;
+    }
+
+    public function setTwitterAccessToken($twitterAccessToken): self
+    {
+        $this->twitterAccessToken = $twitterAccessToken;
+
+        return $this;
     }
 }

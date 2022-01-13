@@ -1,0 +1,10 @@
+hwi_oauth:
+    firewall_names: [main]
+
+    resource_owners:
+        twitter:
+            type:                twitter
+            client_id:           '%env(TWITTER_CLIENT_ID)%'
+            client_secret:       '%env(TWITTER_CLIENT_SECRET)%'
+            options:
+                include_email: true
