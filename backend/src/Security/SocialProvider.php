@@ -2,14 +2,9 @@
 
 namespace App\Security;
 
-use HWI\Bundle\OAuthBundle\OAuth\Response\UserResponseInterface;
-use HWI\Bundle\OAuthBundle\Security\Core\User\OAuthAwareUserProviderInterface;
+use HWI\Bundle\OAuthBundle\Security\Core\User\EntityUserProvider;
 
-
-class SocialProvider implements OAuthAwareUserProviderInterface
+class SocialProvider extends EntityUserProvider
 {
-    public function loadUserByOAuthUserResponse(UserResponseInterface $response)
-    {
-        dump($response);
-    }
+
 }

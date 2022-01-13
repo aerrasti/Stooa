@@ -19,3 +19,8 @@ app.fishbowl.ping:
     path: /ping/{slug}
     controller: App\Controller\FishbowlController::ping
     methods: [POST]
+
+app.login.twitter:
+    path: /twitter/{token}
+    controller: App\Controller\FishbowlController::twitter
+    methods: [POST]

@@ -58,6 +58,13 @@ services:
     App\Stage\FishbowlValidateStage:
         decorates: api_platform.graphql.resolver.stage.validate
 
+    App\Security\SocialProvider:
+        arguments:
+            $class: App\Entity\User
+            $properties:
+                twitter: twitter_id
+            $managerName: default
+
     # Admin
     App\Admin\UserAdmin:
         arguments: [null, App\Entity\User, null]

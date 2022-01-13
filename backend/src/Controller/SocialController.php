@@ -23,10 +23,10 @@ use Symfony\Component\Security\Core\User\UserChecker;
 
 final class SocialController extends AbstractController
 {
-    public function ping(string $accessToken): Response
+    public function twitter(string $accessToken): Response
     {
         $token = new OAuthToken($accessToken);
-        $token->setResourceOwnerName('facebook');
+        $token->setResourceOwnerName('twitter');
 
         $oauthUserProvider = $this->get('app.oauth.provider.user_provider');
         $resourceOwnerMap = $this->get('hwi_oauth.resource_ownermap.main');

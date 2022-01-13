@@ -217,11 +217,11 @@ class User implements UserInterface
     private ?string $plainPassword = null;
 
     /** @ORM\Column(name="twitter_id", type="string", length=255, nullable=true) */
-    protected ?string $twitterId;
+    protected ?string $twitter_id;
 
     /** @ORM\Column(name="twitter_access_token", type="string", length=255, nullable=true) */
-    protected ?string $twitterAccessToken;
-    
+    protected ?string $twitter_access_token;
+
     public function __construct()
     {
         $this->fishbowls = new ArrayCollection();
@@ -474,24 +474,24 @@ class User implements UserInterface
 
     public function getTwitterId(): ?string
     {
-        return $this->twitterId;
+        return $this->twitter_id;
     }
 
     public function setTwitterId($twitterId): self
     {
-        $this->twitterId = $twitterId;
+        $this->twitter_id = $twitterId;
 
         return $this;
     }
 
     public function getTwitterAccessToken(): ?string
     {
-        return $this->twitterAccessToken;
+        return $this->twitter_access_token;
     }
 
     public function setTwitterAccessToken($twitterAccessToken): self
     {
-        $this->twitterAccessToken = $twitterAccessToken;
+        $this->twitter_access_token = $twitterAccessToken;
 
         return $this;
     }

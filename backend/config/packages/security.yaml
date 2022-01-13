@@ -68,6 +68,15 @@ security:
             pattern: /(.*)
             provider: api
             stateless: true
+            oauth:
+                resource_owners:
+                    twitter: twitter_login
+                login_path: hwi_oauth_connect
+                use_forward: false
+                failure_path: hwi_oauth_connect
+
+                oauth_user_provider:
+                    service: App\Security\SocialProvider
             json_login:
                 check_path: /login
                 username_path: email
