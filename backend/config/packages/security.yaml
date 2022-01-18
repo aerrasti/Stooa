@@ -71,6 +71,7 @@ security:
             oauth:
                 resource_owners:
                     twitter: twitter_login
+                    google: google_login
                 login_path: hwi_oauth_connect
                 use_forward: false
                 failure_path: hwi_oauth_connect

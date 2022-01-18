@@ -3,8 +3,13 @@ hwi_oauth:
 
     resource_owners:
         twitter:
-            type:                twitter
-            client_id:           '%env(TWITTER_CLIENT_ID)%'
-            client_secret:       '%env(TWITTER_CLIENT_SECRET)%'
+            type: twitter
+            client_id: '%env(TWITTER_CLIENT_ID)%'
+            client_secret: '%env(TWITTER_CLIENT_SECRET)%'
             options:
                 include_email: true
+        google:
+            type: google
+            client_id: '%env(GOOGLE_CLIENT_ID)%'
+            client_secret: '%env(GOOGLE_CLIENT_SECRET)%'
+            scope: 'email profile'

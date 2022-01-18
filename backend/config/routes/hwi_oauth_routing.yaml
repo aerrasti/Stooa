@@ -12,3 +12,6 @@ hwi_oauth_login:
 
 twitter_login:
     path: /social/check-twitter
+
+google_login:
+    path: /social/check-google
